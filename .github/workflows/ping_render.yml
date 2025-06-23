@@ -1,0 +1,15 @@
+name: Ping Render App
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pingar o app Render
+        run: |
+          curl --silent --show-error https://win-model-stream.onrender.com/
